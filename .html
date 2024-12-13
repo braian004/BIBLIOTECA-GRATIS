@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros Descargados</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Estilos opcionales -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .libros-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .libro-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 200px;
+        }
+        .libro-item img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .libro-item a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .libro-item a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="libros-container">
+        <!-- Ejemplo de libro cargado -->
+        <div class="libro-item">
+            <img src="https://s3proxy.cdn-zlib.sk/covers400/collections/genesis/31c8d22ab1557b43390759a2d5876b46acb09964a8940f3a2595bbd2479ae89b.jpg" alt="Portada del libro">
+            <a href="https://es.z-lib.gs//dl/11125420/fcaaf9?dsource=recommend" download>Descargar (pdf, 224 KB)</a>
+        </div>
+        
+        <div class="libro-item">
+            <img src="https://s3proxy.cdn-zlib.sk/covers400/collections/genesis/e8566db90cd072fe129a19b3cec112b4c4878003f397aa6465450a406d461f78.jpg" alt="Portada del libro">
+            <a href="https://es.z-lib.gs//dl/3403845/2baa3d?dsource=recommend" download>Descargar (pdf, 11.64 MB)</a>
+        </div>
+        <div class="libro-item">
+            <img src="https://s3proxy.cdn-zlib.sk/covers1000/collections/userbooks/a7ec18adfaf574599ae42c4518e41f716ae96f2b6f9f125b7ae2e6f760686928.jpg" alt="Portada del libro">
+            <a class="btn btn-default addDownloadedBook" href="https://es.z-lib.gs/dl/18340422/30eaea?dsource=recommend" target="" data-book_id="18340422" data-isbn="" rel="nofollow">
+                <i class="zlibicon-bookcard-download"></i>Descargar (<span class="book-property__extension">pdf</span>, 30.94 MB)
+            </a>
+        </div>
+    
+
+         
+        <!-- Agregar más elementos dinámicamente -->
+    </div>
+
+    <script>
+        // Ejemplo de cómo podrías cargar dinámicamente libros usando JavaScript
+        const libros = [
+            {
+                imagen: 'https://s3proxy.cdn-zlib.sk/covers400/collections/genesis/fe54a4d8fe9043d6ee1df7ee837c9abb7b714160b4cdc7c5ca5c58b78ed02291.jpg',
+                enlace: '/dl/5632057/9f34f4?dsource=recommend',
+                formato: 'PDF, 12.43 MB'
+            },
+            {
+                imagen: 'https://s3proxy.cdn-zlib.sk/covers300/collections/userbooks/d9ad947722960649bfd9ded6083255e16115a0dd7740b399764eb55e3ce6d3d1.jpg',
+                enlace: 'https://es.z-lib.gs/dl/5632057/9f34f4?dsource=recommend',
+                formato: 'PDF'
+            }
+        ];
+
+        const container = document.querySelector('.libros-container');
+
+        libros.forEach(libro => {
+            const libroDiv = document.createElement('div');
+            libroDiv.classList.add('libro-item');
+
+            const img = document.createElement('img');
+            img.src = libro.imagen;
+            img.alt = 'Portada del libro';
+
+            const link = document.createElement('a');
+            link.href = libro.enlace;
+            link.download = '';
+            link.textContent = `Descargar ${libro.formato}`;
+
+            libroDiv.appendChild(img);
+            libroDiv.appendChild(link);
+            container.appendChild(libroDiv);
+        });
+    </script>
+</body>
+</html>
