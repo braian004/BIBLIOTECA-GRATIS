@@ -13,7 +13,7 @@ options.add_argument('--headless')  # Opcional, si no quieres ver el navegador
 driver = webdriver.Edge(service=service, options=options)
 
 # URL del libro
-url = "https://es.z-lib.gs/book/18183287/e4c2e7/python-a-fondo.html?dsource=recommend"
+url = "https://es.z-lib.gs/"
 
 # Abriendo la página
 driver.get(url)
