@@ -53,7 +53,7 @@ const libros = [
     {   name:'Una Forma Màs Inteligente de Aprender Python Aprenda más rápido y recuerda más',
         imagen:'https://s3proxy.cdn-zlib.sk/covers400/collections/userbooks/e7af24a475a9a4de82238ebbdd7db6967ac120fb16cba0aabb8af49d9018cdb8.jpg ',
         enlace:'https://raw.githubusercontent.com/braian004/BIBLIOTECA-GRATIS/blob/master/Libro/Una%20Forma%20M%C3%A0s%20Inteligente%20de%20Aprender%20Python%20Aprenda%20m%C3%A1s%20r%C3%A1pido%20y%20recuerda%20m%C3%A1s%20(Spanish%20Edition)%20LANDRY%2C%20FABIEN%20.pdf',
-        formato:'pdf 2.23 MB'
+        formato:'pdf 2.25 MB'
     },
     {   name:'Ciencia de datos : técnicas analíticas y aprendizaje estadístico. Un enfoque práctico',
         imagen:'https://s3proxy.cdn-zlib.sk/covers400/collections/genesis/4126d8edc0f17959cf4f11b4829c034806cddd79f891abddb1e9f2114f816fbb.jpg',
