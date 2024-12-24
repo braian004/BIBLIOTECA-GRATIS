@@ -92,9 +92,10 @@ const libros = [
     // },
     {   name:'Node.js Javascript del lado del servidor',
         imagen:'https://s3proxy.cdn-zlib.sk/covers400/collections/userbooks/72aaa264e6d6a61882d3743d4e27b7d6beeab37283553f0e427194cf4fcd1afd.jpg',
-        enlace:'https://raw.githubusercontent.com/github.com/braian004/BIBLIOTECA-GRATIS/blob/master/Libro/Node.js%20Javascript%20del%20lado%20del%20servidor%20(Ismael%20L%C3%B3pez%20Quintero)%20(Z-Library).pdf',
+        enlace:'https://raw.githubusercontent.com/braian004/BIBLIOTECA-GRATIS/blob/master/Libro/Node.js%20Javascript%20del%20lado%20del%20servidor%20(Ismael%20L%C3%B3pez%20Quintero)%20(Z-Library).pdf',
         formato:'pdf 5.17 MB'
     }
+
     // ,
     // {   name:'La via rapida del millonario',
     //     imagen:'https://s3proxy.cdn-zlib.sk/covers400/collections/genesis/4433bd3d1af15b9c7c356b7b2b35fbf6910acd9f51740c2665a703f879050b6b.jpg',
