@@ -4,32 +4,30 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.edge.service import Service
 
-# Ruta al msedgedriver.exe
+# Configuración de Selenium
 service = Service(r'C:\Users\Tito\Desktop\PROYECTOS\BIBLIOTECA\msedgedriver.exe')
 options = webdriver.EdgeOptions()
-options.add_argument('--headless')  # Opcional, si no quieres ver el navegador
-
-# Inicialización del navegador
 driver = webdriver.Edge(service=service, options=options)
 
 # URL del libro
-url = "https://es.z-lib.gs/"
+url = "https://es.z-lib.gs/book/5451386/310399/fundamentos-de-sql.html?dsource=recommend"
 
-# Abriendo la página
+# Cargar la página
 driver.get(url)
 
-# Esperamos que el botón de descarga esté visible (utilizamos WebDriverWait)
 try:
+    # Esperar al elemento del enlace de descarga
     download_link_element = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH, "//a[contains(@href, '/dl/18183287/') and contains(@class, 'addDownloadedBook')]"))
+        EC.presence_of_element_located((By.CLASS_NAME, 'addDownloadedBook'))
     )
-    
-    # Extraemos el enlace de descarga (href)
+    # Extraer el enlace de descarga más reciente
     download_link = download_link_element.get_attribute('href')
-    print(f"Link de descarga: {download_link}")
-    
+    print(f"Enlace dinámico extraído: {download_link}")
 except Exception as e:
-    print("Error al esperar por el enlace de descarga:", e)
+    print(f"Error al obtener el enlace de descarga: {e}")
+finally:
+    input("Presiona Enter para salir y cerrar el navegador...")
+    driver.quit()
 
-# Cerrar el navegador
-driver.quit()
+
+# es.z-lib.gs/dl/5451386/289594?dsource=recommend
