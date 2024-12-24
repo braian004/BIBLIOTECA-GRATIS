@@ -95,7 +95,7 @@ const libros = [
         enlace:'https://raw.githubusercontent.com/braian004/BIBLIOTECA-GRATIS/master/Libro/Node.js%20Javascript%20del%20lado%20del%20servidor%20(Ismael%20L%C3%B3pez%20Quintero)%20(Z-Library).pdf',
         formato:'pdf 5.17 MB'
     }
-
+    // https://github.com/braian004/BIBLIOTECA-GRATIS.git
     // ,
     // {   name:'La via rapida del millonario',
     //     imagen:'https://s3proxy.cdn-zlib.sk/covers400/collections/genesis/4433bd3d1af15b9c7c356b7b2b35fbf6910acd9f51740c2665a703f879050b6b.jpg',
